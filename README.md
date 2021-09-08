@@ -2,7 +2,7 @@ Urban LiDAR flight path optimisation
 ---
 A dual parallel computing framework with a genetic algorithm for urban LiDAR flight path optimisation
 
-This software is derived from a research on high-performance computing for airborne LiDAR data acquisition conducted at New York University's Center for Urban Science & Progress. An academic publication reporting details of the software is currently in review. A video preview of the point cloud acquired by the optimal flight paths is available [here](https://youtu.be/xjaXgecgzbs).
+This software is derived from a research on applications of high-performance computing for optimising airborne LiDAR data acquisition conducted at New York University's Center for Urban Science & Progress. An academic publication reporting details of the software is currently in review. A video preview of the point cloud acquired by the optimal flight paths is available [here](https://youtu.be/xjaXgecgzbs).
 
 ## Compilation
 
@@ -40,7 +40,7 @@ spark-submit --class vo.av.fly.evaluator.ComputeFitness --master yarn --deploy-m
 Call an evaluator and wait for connection to an optimiser at a port. All evaluators must be started before starting the optimiser.
 
 ```bash
-time spark-submit --class vo.av.fly.evaluator.Evaluate target/fo-evaluator-jar-with-dependencies.jar -port <port>
+spark-submit --class vo.av.fly.evaluator.Evaluate target/fo-evaluator-jar-with-dependencies.jar -port <port>
 ```
 
 | Parameter | Description | Example |
@@ -71,6 +71,19 @@ java -cp fo-optimiser-jar-with-dependencies.jar vo.av.fly.optimiser.Optimise -ev
 | log_file | log file | log/a.tsv |
 | in_pcloud | path to input point cloud  | fly/pcloud/sp17 |
 | port | ports to evaluators | 11111,11112,11113 |
+
+### Prune facade points
+
+```bash
+java -cp target/fly-jar-with-dependencies.jar vo.av.fly.pre.PruneFacadePoints -i <in_pcloud> -o <out_pcloud> -r <radius> -tolerance <tolerance>
+```
+
+| Parameter | Description | Example |
+|--|--|--|
+| in_pcloud | path to input point cloud |  |
+| out_pcloud | path to output point coud |  |
+| r | neighbourhood radius | .5 |
+| tolerance | tolerance | .25 |
 
 ### License
 
