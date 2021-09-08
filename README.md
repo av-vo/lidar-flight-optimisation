@@ -2,7 +2,7 @@ Urban LiDAR flight path optimisation
 ---
 A dual parallel computing framework with a genetic algorithm for urban LiDAR flight path optimisation
 
-This software is derived from a research on applications of high-performance computing for optimising airborne LiDAR data acquisition conducted at New York University's Center for Urban Science & Progress. An academic publication reporting details of the software is currently in review. A video preview of the point cloud acquired by the optimal flight paths is available [here](https://youtu.be/xjaXgecgzbs).
+This software is derived from a research on applications of high-performance computing for optimising airborne LiDAR data acquisition conducted at New York University's Center for Urban Science & Progress. An academic publication reporting details of the research and the derived software is currently in review. A video preview of the point cloud acquired by the optimal flight paths is available [here](https://youtu.be/xjaXgecgzbs).
 
 ## Compilation
 
