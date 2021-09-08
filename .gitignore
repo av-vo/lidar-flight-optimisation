@@ -7,3 +7,5 @@ nbactions.xml
 lidardb-log
 *.class
 target
+*.iml
+.idea
