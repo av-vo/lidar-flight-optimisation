@@ -1,0 +1,9 @@
+*.class
+.DS_Store
+*.log
+log*
+target
+nbactions.xml
+lidardb-log
+*.class
+target
